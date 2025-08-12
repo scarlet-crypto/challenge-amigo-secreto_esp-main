@@ -5,7 +5,7 @@ let listaDeAmigos = document.querySelector("#listaAmigos");
 let amigoSecreto = document.querySelector("#resultado");
 
 const agregarAmigo = () =>{
-    if (amigo.amigoInput.value.trim() ==""){
+    if (amigoInput.value.trim() ==""){
         alert("por favor, ingrese un nombre:");
 
         }else{
@@ -21,7 +21,7 @@ const agregarAmigo = () =>{
     const agregarAmigoLista = () =>{
         listaDeAmigos.innerHTML = "";
         for (let i = 0; i < amigos.length; i ++){
-            listaDeAmigos.innerHTML+='<li>${amigos [i]} </li>';
+            listaDeAmigos.innerHTML += `<li>${amigos[i]}</li>`;
         }
     }
 
