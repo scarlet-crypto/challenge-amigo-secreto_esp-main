@@ -5,33 +5,33 @@ let listaDeAmigos = document.querySelector("#listaAmigos");
 let amigoSecreto = document.querySelector("#resultado");
 
 const agregarAmigo = () =>{
-    if (amigo.amigoInput ==""){
+    if (amigo.amigoInput.value.trim() ==""){
         alert("por favor, ingrese un nombre:");
 
         }else{
-            amigos.push(amigo.amigoInput.value);
+            amigos.push(amigoInput.value.trim());
             console.log (amigos);
             amigoInput.value ="";
 
-            agregarAmigoLista()
+            agregarAmigoLista();
 
             }
     }
 
     const agregarAmigoLista = () =>{
         listaDeAmigos.innerHTML = "";
-        for (let i = 0; i < amigos.lenth; i ++){
-            listaDeAmigos.innerHTML+='<li>${amigo [i]} </li>';
+        for (let i = 0; i < amigos.length; i ++){
+            listaDeAmigos.innerHTML+='<li>${amigos [i]} </li>';
         }
     }
 
     const sortearAmigo =() =>{
-        if (amigos.lenth === 0){
+        if (amigos.length === 0){
             alert("debe ingresar un amigo para iniciar el sorteo");
 
         }else{
             let numeroAmigo = Math.floor(Math.random() *
-        amigos.lenth);
+        amigos.length);
 
         amigoSecreto.textContent = amigos[numeroAmigo];
     } 
